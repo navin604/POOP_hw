@@ -1,0 +1,9 @@
+entity 1 add (post) -> http://127.0.0.1:5000/entitymanager/chequing
+
+{
+"max_spend": 10000,
+"min_spend": 10,
+"name": "Navin",
+"branch": "Surrey Td",
+"acc_num": "42069"
+}

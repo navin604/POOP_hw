@@ -1,0 +1,10 @@
+entity 2 add (post) http://127.0.0.1:5000/entitymanager/savings
+
+{
+	"interest": 0.15,
+	"max_withdraw": 10000,
+	"name": "Aiden",
+	"branch": "Surrey Td",
+	"acc_num": "111222"
+}
+
