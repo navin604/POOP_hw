@@ -1,15 +1,21 @@
+from peewee import *
+from database import db
 
-class BankAccount:
+class BankAccount(Model):
     """Base Bank Account class"""
-    def __init__(self,name,branch, acc_num):
-        """Constructs account object"""
-        self.validate_values(name,branch,acc_num)
-        self._person_name = name
-        self._account_number = acc_num
-        self._balance = 0
-        self._min_bal = 0
-        self._stock = False
-        self._home_branch = branch
+
+
+
+    person_name = CharField()
+    account_number = CharField()
+    balance = IntegerField()
+    min_bal = IntegerField()
+    stock = CharField()
+    home_branch = CharField()
+    type = CharField()
+
+    class Meta:
+        database = db
 
     @staticmethod
     def validate_values(name, branch, acc_num):

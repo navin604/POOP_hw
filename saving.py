@@ -1,14 +1,11 @@
 from bank_account import BankAccount
+from peewee import *
 
 class SavingAccount(BankAccount):
     """Class which represents a savings account"""
     ACC_TYPE = 'savings'
-
-    def __init__(self, interest, max_withdraw, name, branch, acc_num):
-        """Savings account constructor"""
-        super().__init__(name, branch, acc_num)
-        self._interest_rate = interest
-        self._max_withdraw = max_withdraw
+    interest_rate = CharField()
+    max_withdraw = CharField()
 
 
     def get_interest_rate(self):

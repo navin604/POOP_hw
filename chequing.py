@@ -1,13 +1,12 @@
+from peewee import *
 from bank_account import BankAccount
 
 class ChequingAccount(BankAccount):
     """Class which represents a chequing account"""
     ACC_TYPE = 'chequing'
-    def __init__(self, max_spend, min_spend, name, branch, acc_num):
-        """Chequing account constructor"""
-        super().__init__(name, branch, acc_num)
-        self._maximum_spend = max_spend
-        self._minimum_spend = min_spend
+
+    maximum_spend = CharField()
+    minimum_spend = CharField()
 
 
 
